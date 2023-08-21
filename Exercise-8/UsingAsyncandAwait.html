@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulated Asynchronous Operation with async/await</title>
+</head>
+<body>
+  <h1>Simulated Asynchronous Operation with async/await</h1>
+  <p>Open the browser console to see the output.</p>
+
+  <script>
+    function delay(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function simulateAsyncOperation() {
+      await delay(2000);
+    }
+
+    async function main() {
+      console.log("Start of the program");
+      await simulateAsyncOperation();
+      console.log("Simulated asynchronous operation complete!");
+      console.log("End of the program");
+    }
+
+    main();
+  </script>
+</body>
+</html>

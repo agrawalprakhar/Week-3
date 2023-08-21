@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unique Numbers</title>
+</head>
+<body>
+
+<h1>Unique Numbers</h1>
+
+<script>
+function findUniqueNumbers(arr) {
+  var uniqueNumbers = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    var currentNumber = arr[i];
+    if (uniqueNumbers.indexOf(currentNumber) === -1) {
+      uniqueNumbers.push(currentNumber);
+    }
+  }
+
+  return uniqueNumbers;
+}
+
+var inputArray = [1, 2, 3, 2, 4, 5, 1, 3];
+var uniqueArray = findUniqueNumbers(inputArray);
+console.log(uniqueArray); // Output will be [1, 2, 3, 4, 5]
+
+// Union Of Two Array
+
+
+function findIntersection(arr1, arr2) {
+  var intersection = [];
+
+  for (var i = 0; i < arr1.length; i++) {
+    var currentNumber = arr1[i];
+    if (arr2.indexOf(currentNumber) !== -1) {
+      intersection.push(currentNumber);
+    }
+  }
+
+  return intersection;
+}
+
+var array1 = [1, 2, 3, 4, 5];
+var array2 = [3, 4, 5, 6, 7];
+var intersectionArray = findIntersection(array1, array2);
+console.log(intersectionArray); // Output will be [3, 4, 5]
+
+</script>
+
+</body>
+</html>

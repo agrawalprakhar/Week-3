@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulated Asynchronous Operation</title>
+</head>
+<body>
+  <h1>Simulated Asynchronous Operation</h1>
+  <p>Open the browser console to see the output.</p>
+
+  <script>
+   function simulateAsyncOperation() {
+    return new Promise(function(resolve) {
+      setTimeout(function() {
+        resolve();
+      }, 2000);
+    });
+  }
+  
+  // Example usage
+  console.log("Start of the program");
+  simulateAsyncOperation().then(function() {
+    console.log("Simulated asynchronous operation complete!");
+  });
+  console.log("End of the program");
+  </script>
+</body>
+</html>

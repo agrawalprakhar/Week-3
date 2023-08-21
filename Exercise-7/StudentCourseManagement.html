@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Course Management</title>
+</head>
+<body>
+
+<h1>Student Course Management</h1>
+
+<script>
+// Create a student object
+var student = {
+  name: "John Doe",
+  gradeLevel: "10th",
+  courses: ["Math", "Science", "English"]
+};
+
+// Function to add a course to the student's courses array
+function addCourse(courseName) {
+  student.courses.push(courseName);
+}
+
+// Function to remove a course from the student's courses array
+function removeCourse(courseName) {
+  var courseIndex = student.courses.indexOf(courseName);
+  if (courseIndex !== -1) {
+    student.courses.splice(courseIndex, 1);
+  }
+}
+
+// Testing the functions
+console.log("Initial courses:", student.courses);
+addCourse("History");
+console.log("After adding History:", student.courses);
+removeCourse("Science");
+console.log("After removing Science:", student.courses);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Students by Course</title>
+</head>
+<body>
+
+<h1>Find Students by Course</h1>
+
+<script>
+function findStudentsByCourse(students, courseName) {
+  var studentsTakingCourse = [];
+
+  for (var i = 0; i < students.length; i++) {
+    var student = students[i];
+    if (student.courses.indexOf(courseName) !== -1) {
+      studentsTakingCourse.push(student);
+    }
+  }
+
+  return studentsTakingCourse;
+}
+
+var students = [
+  {
+    name: "John Doe",
+    courses: ["Math", "Science"]
+  },
+  {
+    name: "Jane Smith",
+    courses: ["Science", "History"]
+  },
+  {
+    name: "Michael Johnson",
+    courses: ["Math", "English"]
+  }
+];
+
+var courseName = "Science";
+var studentsTakingCourse = findStudentsByCourse(students, courseName);
+console.log(studentsTakingCourse);
+</script>
+
+</body>
+</html>

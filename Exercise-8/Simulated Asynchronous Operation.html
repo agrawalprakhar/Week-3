@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulated Asynchronous Operation</title>
+</head>
+<body>
+  <h1>Simulated Asynchronous Operation</h1>
+  <p>Open the browser console to see the output.</p>
+
+  <script>
+    function simulateAsyncOperation(callback) {
+      setTimeout(function() {
+        callback();
+      }, 2000);
+    }
+
+    console.log("Start of the program");
+    simulateAsyncOperation(function() {
+      console.log("Simulated asynchronous operation complete!");
+    });
+    console.log("End of the program");
+  </script>
+</body>
+</html>
